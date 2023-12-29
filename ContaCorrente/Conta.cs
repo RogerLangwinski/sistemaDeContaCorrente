@@ -24,10 +24,7 @@ namespace ContaCorrente
             Saldo = float.Parse(Console.ReadLine());
         }
 
-        public Conta()
-        {
-        }
-
+       
         public string ExibeInfo()
         {
             return "--Conta corrente nº " + Numero + "\n--Cliente " + Nome;
