@@ -12,11 +12,20 @@ namespace ContaCorrente
         private string Nome;
         internal float Saldo;
 
-        public Conta(string numero, string nome, float saldo)
+
+        public void CriacaoDeConta()
         {
-            this.Numero = numero;
-            this.Nome = nome;
-            this.Saldo = saldo;
+            Console.WriteLine("ABERTURA DE NOVA CONTA");
+
+            Console.WriteLine("Qual o nome do cliente?");
+            Nome = Console.ReadLine();
+
+            Console.WriteLine("Qual o saldo inicial da conta?");
+            Saldo = float.Parse(Console.ReadLine());
+        }
+
+        public Conta()
+        {
         }
 
         public string ExibeInfo()
@@ -35,7 +44,7 @@ namespace ContaCorrente
         }
 
         public string ConsultaSaldo()
-        {            
+        {
             return "Saldo R$ " + Saldo.ToString("F2");
         }
 

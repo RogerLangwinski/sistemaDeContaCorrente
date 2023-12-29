@@ -7,19 +7,21 @@ namespace ContaCorrente
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ABERTURA DE NOVA CONTA");
+            /* 
+             Console.WriteLine("ABERTURA DE NOVA CONTA");
 
-            Console.WriteLine("Qual o nome do cliente?");
-            string nome = Console.ReadLine();
+             Console.WriteLine("Qual o nome do cliente?");
+             string nome = Console.ReadLine();
 
-            Console.WriteLine("Qual o saldo inicial da conta?");
-            float saldoInicial = float.Parse(Console.ReadLine());
-
+             Console.WriteLine("Qual o saldo inicial da conta?");
+             float saldoInicial = float.Parse(Console.ReadLine()); 
+            */
 
 
             List<Conta> contas = new List<Conta>();
-            contas.Add(new Conta("0001", nome, saldoInicial));
-            Console.WriteLine(contas[0].ExibeInfo());   
+            contas.Add(new Conta());
+            contas[0].CriacaoDeConta();
+            Console.WriteLine("\n" + contas[0].ExibeInfo());   
 
             Console.WriteLine("\nSelecione qual operacao deseja realizar: \n1- Consultar saldo\n2- Depositar valor\n3- Sacar valor");
             char operador = char.Parse(Console.ReadLine());
