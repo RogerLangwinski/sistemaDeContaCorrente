@@ -7,23 +7,17 @@ namespace ContaCorrente
     {
         static void Main(string[] args)
         {
-            /* 
-             Console.WriteLine("ABERTURA DE NOVA CONTA");
-
-             Console.WriteLine("Qual o nome do cliente?");
-             string nome = Console.ReadLine();
-
-             Console.WriteLine("Qual o saldo inicial da conta?");
-             float saldoInicial = float.Parse(Console.ReadLine()); 
-            */
-
 
             List<Conta> contas = new List<Conta>();
             contas.Add(new Conta());
             contas[0].CriacaoDeConta();
             Console.WriteLine("\n" + contas[0].ExibeInfo());   
 
-            Console.WriteLine("\nSelecione qual operacao deseja realizar: \n1- Consultar saldo\n2- Depositar valor\n3- Sacar valor");
+            Console.WriteLine("\nSelecione qual operacao deseja realizar:" +
+                "\n1- Consultar saldo" +
+                "\n2- Depositar valor" +
+                "\n3- Sacar valor" +
+                "\n4- Criar nova conta");
             char operador = char.Parse(Console.ReadLine());
             float valor;
             char repetirPrograma = 'S';
@@ -51,6 +45,11 @@ namespace ContaCorrente
 
                     contas[0].Saque(valor);
                 }
+
+                /*else if (operador == 4)
+                {
+                    contas
+                }*/
 
                 else
                 {
